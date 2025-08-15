@@ -15,17 +15,17 @@ CREATE TABLE Books (
 );
 
 CREATE TABLE Customers(
-    customer_id INT PRIMARY KEY,
+    order_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
     address TEXT
 );
 
-CREATE TABLE ORDERS (
+CREATE TABLE Orders (
     ORDER_ID INT PRIMARY KEY,
     CUSTOMER_ID INT,
-    ORDER_DATE DATE,
-    FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMERS(CUSTOMER_ID)
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 CREATE TABLE ORDER_DETAILS (
