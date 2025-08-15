@@ -7,9 +7,9 @@ CREATE TABLE Authors (
 
 CREATE TABLE Books (
     BOOK_ID INT PRIMARY KEY,
-    Title VARCHAR(130),
+    title VARCHAR(130),
     AUTHOR_ID INT,
-    PRICE DOUBLE,
+    price DOUBLE,
     PUBLICATION_DATE DATE,
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
