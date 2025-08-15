@@ -23,7 +23,7 @@ CREATE TABLE Customers(
 
 CREATE TABLE Orders (
     ORDER_ID INT PRIMARY KEY,
-    CUSTOMER_ID INT,
+    customer_id INT,
     order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
