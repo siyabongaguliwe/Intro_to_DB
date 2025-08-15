@@ -1,6 +1,6 @@
 USE alx_book_store;
 
-CREATE TABLE AUTHORS (
+CREATE TABLE Authors (
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
 );
@@ -11,7 +11,7 @@ CREATE TABLE BOOKS (
     AUTHOR_ID INT,
     PRICE DOUBLE,
     PUBLICATION_DATE DATE,
-    FOREIGN KEY (author_id) REFERENCES AUTHORS(author_id)
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
 CREATE TABLE CUSTOMERS (
